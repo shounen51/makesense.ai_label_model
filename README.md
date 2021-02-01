@@ -1,0 +1,2 @@
+# makesense.ai_label_model
+把其他格式的label轉換成makesense輸出的VGG格式
