@@ -13,7 +13,7 @@ def load_json(path):
     except:
         return False, _dict
 
-rootDir = './data/test1/'
+rootDir = './data/test0/'
 labels = VGG_trans()
 for _file in os.listdir(rootDir):
     if _file.split('.')[-1] == 'png' and _file.split('.')[-2] != 'cs':
@@ -34,5 +34,6 @@ for _file in os.listdir(rootDir):
             x1y2 = [x1y1[0], x2y2[1]]
             points = [x1y1, x2y1, x2y2, x1y2]
             points = [[y,x] for x,y in points]
-            labels.add_label(name, index, points, label)
+            labels.add_label(name, points, label)
+        print(name)
 labels.save('./VGG/test.json')
