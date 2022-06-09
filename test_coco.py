@@ -29,7 +29,7 @@ def load_label(path, size):
     return labels
 
 coco = coco_trans()
-rootDir = './data/'
+rootDir = './dataset/'
 images_dir = os.path.join(rootDir, "images")
 txt_dir = os.path.join(rootDir, "labels")
 
