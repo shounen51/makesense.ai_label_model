@@ -3,6 +3,7 @@ import json
 class VGG_trans():
     def __init__(self):
         self.labels={}
+        
 
     def add_img(self, img_name:str, path:str):
         self.labels[img_name] = {}
