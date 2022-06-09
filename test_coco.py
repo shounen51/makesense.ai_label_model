@@ -29,7 +29,7 @@ def load_label(path, size):
     return labels
 
 coco = coco_trans()
-rootDir = './dataset/'
+rootDir = './data/'
 images_dir = os.path.join(rootDir, "images")
 txt_dir = os.path.join(rootDir, "labels")
 
@@ -57,5 +57,5 @@ for _file in os.listdir(images_dir):
             points.extend([x2,y2])
             points.extend([x1,y2])
             coco.add_annotation(_file, points, classes[c])
-        
+os.makedirs("./coco",exist_ok=True)
 coco.save('./coco/annotations.json')
